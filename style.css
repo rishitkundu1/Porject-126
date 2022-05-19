@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+*{
+      padding: 0;
+      margin: 0;
+      font-family: 'Bangers', cursive;
+}
+body{
+      background-size: 100%;
+      min-height: 100vh;
+}
+.heading_text{
+      color: blue;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      font-size: 70px;
+}
+.note{
+      font-size: 28px;
+      color: red;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+}
+.div_speed{
+      position: absolute;
+      top: 150px;
+      left: 70px;
+}
+.div_speed_img{
+      width: 180px;
+      border-radius: 50%;
+}
+.div_volume{
+      position: absolute;
+      top: 150px;
+      right: 70px;
+}
+.div_volume_img{
+      width: 180px;
+      border-radius: 50%;
+}
+#speed,#volume{
+      color: blue;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      font-size: 35px;
+      background-color: blue;
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: 4px solid white;
+}
+canvas{
+      background-color: white;
+      border-radius: 20px;
+      border: 10px solid blue;
+     box-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.songName{
+      width: 400px;
+      font-size: 35px;
+      margin-top: 670px;
+      padding: 10px 20px;
+      color: white;
+      background-color: green;
+      border: 7px solid white;
+      border-radius: 10px;
+      transition: 0.5s ease;
+      margin-right: 10px;
+}
