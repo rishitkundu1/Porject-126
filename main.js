@@ -2,6 +2,10 @@ leftWristX = "";
 leftWristY = "";
 rightWristX = "";
 rightWristY = "";
+scoreLeftWrist = 0;
+scoreRightWrist = 0;
+songStatus = "";
+
 function setup(){
       canvas = createCanvas(900,600);
       canvas.center();
@@ -18,6 +22,17 @@ function preload(){
 }
 function draw(){
       image(video, 0, 0, 900, 600);
+      songStatus = song1.isPlaying();
+      fill("Red");
+      if(scoreLeftWrist > 0.2){
+            circle(leftWristX, leftWristY, 20)
+            fill("Red")
+            song2.stop();
+            if(songStatus == false){
+                  song1.play();
+                  document.getElementById("songName").innerHTML = "Song: Harry Potter Theme Song";
+            }
+      }
 }
 function modelLoaded(){
       console.log("PoseNet is Initialized")
