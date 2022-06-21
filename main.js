@@ -4,7 +4,8 @@ rightWristX = "";
 rightWristY = "";
 scoreLeftWrist = 0;
 scoreRightWrist = 0;
-songStatus = "";
+song1Status = "";
+song2Status = "";
 
 function setup(){
       canvas = createCanvas(900,600);
@@ -22,15 +23,25 @@ function preload(){
 }
 function draw(){
       image(video, 0, 0, 900, 600);
-      songStatus = song1.isPlaying();
+      song1Status = song1.isPlaying();
+      song2Status = song2.isPlaying();
       fill("Red");
       if(scoreLeftWrist > 0.2){
             circle(leftWristX, leftWristY, 20)
             fill("Red")
             song2.stop();
-            if(songStatus == false){
+            if(song1Status == false){
                   song1.play();
                   document.getElementById("songName").innerHTML = "Song: Harry Potter Theme Song";
+            }
+      }
+      if(scoreRightWrist > 0.2){
+            circle(rightWristX, rightWristY, 20);
+            fill("Red");
+            song1.stop();
+            if(song2Status == false){
+                  song2.play();
+                  document.getElementById("songName").innerHTML = "Song: Believer Song";
             }
       }
 }
